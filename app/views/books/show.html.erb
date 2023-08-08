@@ -1,9 +1,19 @@
-<h2>Title</h2>
-
-<p><%= @book.title %></p>
-
-<h2>Body</h2>
-
-<p><%= @book.body %></p>
-<%= link_to "Edit", edit_book_path(@book.id) %>
-<%= link_to "Back", books_path %>
+<div class= "book-show">
+  <div class= "book-show-title">
+    <h4>Title:</h4>
+    <p><%= @book.title %></p>
+  </div>
+  
+  <div class= "book-show-body">
+    <h4>Body:</h4>
+    <p><%= @book.body %></p>
+  </div>
+</div>
+<div class= "show-button">
+  <div class= "show-button-edit">
+   <%= link_to "Edit", edit_book_path(@book.id) %>
+  </div>
+  <div class= "back-button">
+   <%= link_to "Back", books_path %>
+  </div>
+</div>
